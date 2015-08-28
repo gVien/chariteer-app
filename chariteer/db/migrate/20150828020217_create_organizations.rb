@@ -6,6 +6,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :contact_email
       t.string :website
       t.boolean :non_profit
+      t.string :password_digest
 
       t.timestamps null: false
     end
