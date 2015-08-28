@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828020425) do
+ActiveRecord::Schema.define(version: 20150828174637) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "type"
@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(version: 20150828020425) do
     t.string   "contact_email"
     t.string   "website"
     t.boolean  "non_profit"
+    t.string   "password_digest"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "volunteers", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"

@@ -1,5 +1,10 @@
 module SessionsHelper
-  def current_user
-    @current_user ||=User.find_by(id: session[:id]) if session[:id]
+  def current_volunteer
+    @current_volunteer ||=Volunteer.find_by(id: session[:id]) if session[:id]
   end
+
+  def current_organization
+    @current_organization ||=Organization.find_by(id: session[:id]) if session[:id]
+  end
+
 end
