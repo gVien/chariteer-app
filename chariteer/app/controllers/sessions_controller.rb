@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-     if volunteer = Volunteer.find_by(email: params[:volunteer][:email]).present?
-      if volunteer.authenticate(params[:volunteer][:password])
+     if @volunteer = Volunteer.find_by(email: params[:volunteer][:email]).present?
+      if @volunteer.authenticate(params[:volunteer][:password])
       # Save the volunteer ID in the session so it can be used in
       # subsequent requests
-        session[:id] = volunteer.id
-        redirect_to volunteer_path(volunteer)
+        session[:id] = @volunteer.id
+        redirect_to volunteer_path
       end
 
      elsif organization = Organization.find_by(email: params[:organization][:email]).present?
@@ -23,6 +23,7 @@ class SessionsController < ApplicationController
         redirect_to organization_path(organization)
       end
     else
+      flash[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
