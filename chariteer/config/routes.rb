@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   scope "/Api" do
     # resources :sessions
+
+    get 'bananas' => 'volunteers#bananas'
+
     resources :volunteers
 
     resources :organizations do

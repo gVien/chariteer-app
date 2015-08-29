@@ -1,15 +1,14 @@
-module Api
+# module Api
   class VolunteersController < ApplicationController
-    respond_to :json
 
     include SessionsHelper
     
     def index
-      @volunteers = Volunteer.all
+      volunteers = Volunteer.all
+      render json: volunteers, status: 201
     end
-
-    def new
-       volunteer = Volunteer.new
+    
+    def bananas
     end
 
     def create
@@ -39,4 +38,4 @@ module Api
     end
   end
 
-end
+# end
