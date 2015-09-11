@@ -1,5 +1,7 @@
 # chariteer-app
 
+THIS REPO IS DEPRECATED. THE NEW REPO FOR THE API VERSION IS LOCATED AT [CHARITEER API](https://github.com/TeresaNesteby/chariteer-api) AND THE CLIENT SIDE AT [CHARITEER CLIENT SIDE](https://github.com/TeresaNesteby/chariteer-client-side).
+
 ### Team Norms/Culture
 
 1. Check-in three times a day -- one in the morning before coding (9AM), one in the afternoon (12PM), and another one at 6pm.
